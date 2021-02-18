@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="res/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="res/js/index.js"></script>
+    <script src="res/js/getvelemeny.js"></script>
+    <title>Borbolya vendégház</title>
+</head>
+
+<body onload="getAllVelemeny()">
+
+    <!--  Fejléc --> 
+    <header>
+       
+        <div id="cim">
+            <img id="home" src="res/img/fejlec/home.png" />
+            <li><a href="index.html">Borbolya vendégház</a></li>
+        </div>
+ 
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html">Apartmanjaink</a></li>
+            <li><a href="index.html">Kedvezmények</a></li>
+            <li><a href="index.html">Programok</a></li>
+            <li><a href="index.html">Galéria</a></li>
+            <li><a href="index.html">Szolgáltatások</a></li>
+            <li><a href="index.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+    
+    </header>
+    
+    
+    <section id="szallasokaloldal">
+    
+    <div class="apartmanok">
+    
+    <section id="borbolyavendeghaz">
+    
+    <h1>Borbolya Vendégház</h1>
+    
+    <!-- <div class="elemek"> 
+        <section id="balelem">
+        <img src="res/img/elemek/fekete%20sima.svg" alt="">
+        </section>
+        </div>
+        <div class="elemek">
+        <section id="jobbelem">
+        <img src="res/img/elemek/sarokelem%20fekete.svg" alt="">
+        </section>
+        </div> -->
+        
+    <div id="lightbox">
+        <span id="close">&#10005;</span>
+        <img id="active" src=""/>
+    </div>
+        
+    <div class="szallasokcontainer">
+    
+    <div class="item item1">
+    
+        
+    <img id="vendeghazmain" src="res/img/apartmanok/vendeghaz/1.jpg" alt="" class="szallasokmainkep">
+    
+    <div class="kiskepek">
+    
+    <!--  Gombok  -->
+            <a class="prevszallas" onclick="arrow(-1)">&#10094;</a>
+            <a class="nextszallas" onclick="arrow(1)">&#10095;</a>
+    
+    <img id="vendeghaz1" onclick="mainchange(1)" src="res/img/apartmanok/vendeghaz/1.jpg" alt="" class="szallasokkiskep">
+    <img id="vendeghaz2" onclick="mainchange(2)" src="res/img/apartmanok/vendeghaz/2.jpg" alt="" class="szallasokkiskep">
+    <img id="vendeghaz3" onclick="mainchange(3)" src="res/img/apartmanok/vendeghaz/3.jpg" alt="" class="szallasokkiskep">
+    <img id="vendeghaz4" onclick="mainchange(4)" src="res/img/apartmanok/vendeghaz/4.jpg" alt="" class="szallasokkiskep">
+    <img id="vendeghaz5" onclick="mainchange(5)" src="res/img/apartmanok/vendeghaz/5.jpg" alt="" class="szallasokkiskep">
+    
+    
+        </div>
+    
+    </div>
+    
+    <div class="item item2">
+    
+    <h2>Részletek</h2>
+    
+    <p>A különálló összkomfortos vendégház egy 1000m2-es zárt udvarban áll. Négy fő számára ideális, de 6 fő is kényelmesen elfér. A földszinten étkező-konyha-nappali és a tusoló-WC található, a légkondicionált tetőtérbe “pingvinlépcső” vezet, itt a 2 hálószoba. A konyha jól felszerelt (vízforraló, kenyérpirító, kávéfőző, mikro stb.), önellátásra alkalmas, de a közeli étterem teljes kínálatára 10%-os kedvezménykártyát tudunk adni. <br><br> Ágyneműt, törölközőt, konyharuhát biztosítunk, a szabadtéri sütéshez-főzéshez grillező, bogrács is van. Prospektusokat, ismertetőket a környékről talál a nappaliban, sőt, a Zsolnay Kulturális Negyed, valamint a Cella Septichora Látogatóközpont belépődíjaiból 10% kedvezményt kaphatnak Vendégeink. Ha pici gyerekkel jönnek, van a házban kiságy, etetőszék, és fürdetőkád is, a nagyobbacskáknak néhány kerti játék (célbadobó, tollaslabda, ugróiskola stb.), ha nincs kedvük a közeli játszótérre menni. A kertben érő gyümölcsöket lehet szedni, enni.</p>
+    
+    </div>
+    
+    <div class="item item3">
+    
+    <p>1-2 fő részére</p>
+    <h3>16.000 FT / ház / éj</h3>
+    <img src="res/img/emberkek/egy.svg" alt=""> 
+    <img src="res/img/emberkek/ketto.svg" alt="">
+    
+    <p>3 fő részére</p>
+    <h3>18.000 FT / ház / éj</h3>
+    <img src="res/img/emberkek/harom.svg" alt="">
+    
+    <p>4 fő részére</p>
+    <h3>20.000 FT / ház / éj</h3>
+    <img src="res/img/emberkek/negy.svg" alt="">
+    
+    <p>5 fő részére</p>
+    <h3>22.500 FT / ház / éj</h3>
+    <img src="res/img/emberkek/negy.svg" alt="">
+    <img src="res/img/emberkek/egy.svg" alt="">
+    
+    <p>6 fő részére</p>
+    <h3>24.000 FT / ház / éj</h3>
+    <img src="res/img/emberkek/negy.svg" alt="">
+    <img src="res/img/emberkek/ketto.svg" alt="">
+    
+    <p>Kisállat</p>
+    <h3>1.500 FT / egyed / éj</h3>
+    
+    </div>
+    
+        </div>
+        
+        <div class="szallasokszolgaltatasok">
+    
+    <h2>Szolgáltatások</h2>
+    
+    <div class="szolgaltatasokcontainer"> 
+    
+    <div class="item item1">
+    
+    <img src="res/img/szolgaltatasok/TV.svg" alt="">
+    <span>TV</span>
+    
+            </div>
+            
+            <div class="item item2">
+    
+    <img src="res/img/szolgaltatasok/tuzrakohely.svg" alt="">
+    <span>Tuzrakóhely</span>
+    
+            </div>
+            
+            <div class="item item3">
+    
+    <img src="res/img/szolgaltatasok/parkolas.svg" alt="">
+    <span>Saját Parkoló</span>
+    
+            </div>
+            
+            <div class="item item4">
+    
+    <img src="res/img/szolgaltatasok/bababarat.svg" alt="">
+    <span>Gyerekbarát</span>
+    
+            </div>
+            
+            <div class="item item5">
+    
+    <img src="res/img/szolgaltatasok/legkondi.svg" alt="">
+    <span>Légkondi</span>
+    
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="attekintescontainer"> 
+    
+    <div class="item item1">
+    
+    <h2>Áttekintés</h2>
+    
+    
+    
+     <table cellspacing="0">
+      <tr>
+        <th>Férőhely:</th>
+        <th>4 fo (+2 fo pótággyal)</th>
+      </tr>
+      <tr>
+        <td>Kilátás</td>
+        <td>hegyekre</td>
+      </tr>
+      <tr>
+        <th>Erkély</th>
+        <th>van</th>
+      </tr>
+      <tr>
+        <td>Kert</td>
+        <td>van</td>
+      </tr>
+      <tr>
+        <th>Internet</th>
+        <th>nincs</th>
+      </tr>
+      <tr>
+        <td>Légkondi</td>
+        <td>van</td>
+      </tr>
+
+</table> 
+   
+     <p>
+     <button> <a href="foglalasborbolya.html">Ezt Lefoglalom</a> </button>
+     </p>
+     
+        </div>
+        
+        <div class="item item2">
+     
+     <h2>Értékelés</h2>
+     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+     <section id="szallasokstars">
+    <span id="1.1" class="fa fa-star-o"></span>
+    <span id="1.2" class="fa fa-star-o"></span>
+    <span id="1.3" class="fa fa-star-o"></span>
+    <span id="1.4" class="fa fa-star-o"></span>
+    <span id="1.5" class="fa fa-star-o"></span>
+    
+    </section>
+  
+
+     <p id="megjegyzes1"></p>
+   
+     <p id="nev1"></p>
+    
+    <p>
+     <button> <a href="velemenyborbolya.html">Véleményt írok</a> </button>
+     </p>
+     
+        </div>
+        
+        </div>
+    
+        </section>
+        
+    </div>
+    
+    
+    <div class="apartmanok">
+    
+    <section id="2szemelyes">
+    
+    <h1>Kétszemélyes Apartman</h1>
+    
+    <div class="szallasokcontainer">
+    
+    <div class="item item1">
+    
+    <img id="ketszemelyesmain" src="res/img/apartmanok/ketszemelyes/1.jpg" alt="" class="szallasokmainkep">
+    
+    <div class="kiskepek">
+    
+    <!--  Gombok  -->
+            <!-- <a class="prevszallas" onclick="ide ird mit kene csinalnia xD">&#10094;</a>
+            <a class="nextszallas" onclick="meg ide xD">&#10095;</a> -->
+    
+    <img id="ketszemelyes1" onclick="mainchange2(1)" src="res/img/apartmanok/ketszemelyes/1.jpg" alt="" class="szallasokkiskep">
+    <img id="ketszemelyes2" onclick="mainchange2(2)" src="res/img/apartmanok/ketszemelyes/2.jpg" alt="" class="szallasokkiskep">
+    <img id="ketszemelyes3" onclick="mainchange2(3)" src="res/img/apartmanok/ketszemelyes/3.jpg" alt="" class="szallasokkiskep">
+    <img id="ketszemelyes4" onclick="mainchange2(4)" src="res/img/apartmanok/ketszemelyes/4.jpg" alt="" class="szallasokkiskep">
+    <img id="ketszemelyes5" onclick="mainchange2(5)" src="res/img/apartmanok/ketszemelyes/5.jpg" alt="" class="szallasokkiskep">
+    
+    
+        </div>
+    
+        </div>
+        
+        <div class="item item2">
+    
+    <h2>Részletek</h2>
+    
+    <p>A 2 fő számára kényelmes apartman nyugati fekvésű, csendes utcára néző, 20 m2-es fürdőszobás szoba. Vendégeink kényelmét szolgálja a szobában található minikonyha. A konyha önellátásra alkalmas, jól felszerelt (mikro, kávéfőző, vízforraló stb.), de a közeli étterem teljes kínálatára 10%-os kedvezménykártyát tudunk adni. Ágyneműt, törölközőt, konyharuhát biztosítunk, illetve a szabadtéri sütéshez-főzéshez grillező, bogrács is van. A szobához külön terasz tartozik. <br><br>
+
+    A szobában talál prospektusokat, ismertetőket a környékről, sőt, a Zsolnay Kulturális Negyed, valamint a Cella Septichora Látogatóközpont belépődíjaiból 10% kedvezményt kaphatnak vendégeink.</p>
+    
+    </div>
+    
+    <div class="item item3">
+    
+    <p>1 fő részére</p>
+    <h3>6.000 FT / éj</h3>
+    <img src="res/img/emberkek/egy.svg" alt="">
+    
+    <p>2 fő részére</p>
+    <h3>10.000 FT / szoba / éj</h3>
+    <img src="res/img/emberkek/ketto.svg" alt="">
+    
+    <p>Kisállat</p>
+    <h3>1.500 FT / egyed / éj</h3>
+    
+        </div>
+        
+        </div>
+        
+        <div class="szallasokszolgaltatasok">
+    
+    
+    <h2>Szolgáltatások</h2>
+    
+    <div class="szolgaltatasokcontainer"> 
+    
+    <div class="item item1">
+    
+    <img src="res/img/szolgaltatasok/TV.svg" alt="">
+    <span>TV</span>
+    
+            </div>
+            
+            <div class="item item2">
+    
+    <img src="res/img/szolgaltatasok/tuzrakohely.svg" alt="">
+    <span>Tuzrakóhely</span>
+    
+            </div>
+            
+            <div class="item item3">
+    
+    <img src="res/img/szolgaltatasok/parkolas.svg" alt="">
+    <span>Saját Parkoló</span>
+    
+            </div>
+            
+            <div class="item item4">
+    
+    <img src="res/img/szolgaltatasok/wifi.svg" alt="">
+    <span>Ingyen Wi-fi</span>
+    
+            </div>
+            
+        </div>
+    
+    </div>
+    
+    <div class="attekintescontainer"> 
+    
+    <div class="item item1">
+    
+    <h2>Áttekintés</h2>
+    
+     <table cellspacing="0">
+      <tr>
+        <th>Férohely:</th>
+        <th>2 fo</th>
+      </tr>
+      <tr>
+        <td>Kilátás</td>
+        <td>utcára</td>
+      </tr>
+      <tr>
+        <th>Erkély</th>
+        <th>van</th>
+      </tr>
+      <tr>
+        <td>Kert</td>
+        <td>van</td>
+      </tr>
+      <tr>
+        <th>Internet</th>
+        <th>van</th>
+      </tr>
+      <tr>
+        <td>Légkondi</td>
+        <td>nincs</td>
+      </tr>
+
+</table> 
+   
+     <p>
+     <button> <a href="foglalasketszemelyes.html">Ezt Lefoglalom</a> </button>
+     </p>
+     
+        </div>
+     
+     <div class="item item2">
+     
+     <h2>Értékelés</h2>
+     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+     <section id="szallasokstars">
+    <span id="2.1" class="fa fa-star-o"></span>
+    <span id="2.2" class="fa fa-star-o"></span>
+    <span id="2.3" class="fa fa-star-o"></span>
+    <span id="2.4" class="fa fa-star-o"></span>
+    <span id="2.5" class="fa fa-star-o"></span>
+    
+    </section>
+    
+     <p id="megjegyzes2"></p>
+    
+     <p id="nev2"></p>
+    
+    <p>
+     <button> <a href="velemenyketszemelyes.html">Véleményt írok</a> </button>
+     </p>
+     
+        </div>
+        
+        </div>
+    
+    </section>
+    
+    </div>
+    
+    <div class="apartmanok">
+    
+    <section id="4szemelyes">
+    
+    <h1>Négyszemélyes Apartman</h1>
+    
+    <div class="szallasokcontainer">
+    
+    <div class="item item1">
+    
+    <img id="negyszemelyesmain" src="res/img/apartmanok/negyszemelyes/1.jpg" alt="" class="szallasokmainkep">
+    
+    <div class="kiskepek">
+    
+    <!-- Gombok
+            <a class="prevszallas" onclick="ide ird mit kene csinalnia xD">&#10094;</a>
+            <a class="nextszallas" onclick="meg ide xD">&#10095;</a> -->
+    
+    <img id="negyszemelyes1" onclick="mainchange3(1)" src="res/img/apartmanok/negyszemelyes/1.jpg" alt="" class="szallasokkiskep">
+    <img id="negyszemelyes2" onclick="mainchange3(2)" src="res/img/apartmanok/negyszemelyes/2.jpg" alt="" class="szallasokkiskep">
+    <img id="negyszemelyes3" onclick="mainchange3(3)" src="res/img/apartmanok/negyszemelyes/3.jpg" alt="" class="szallasokkiskep">
+    <img id="negyszemelyes4" onclick="mainchange3(4)" src="res/img/apartmanok/negyszemelyes/4.jpg" alt="" class="szallasokkiskep">
+    <img id="negyszemelyes5" onclick="mainchange3(5)" src="res/img/apartmanok/negyszemelyes/5.jpg" alt="" class="szallasokkiskep">
+    
+    
+        </div>
+    
+        </div>
+        
+        <div class="item item2">
+    
+    <h2>Részletek</h2>
+    
+    <p>Nagyobb apartmanunk 4 fő számára ideális, de 6 fő is kényelmesen elfér, mert az egyik hálóban 3 ágy áll, a nappaliban kinyitható a kanapé. A konyha jól felszerelt (vízforraló, kenyérpirító, kávéfőző, mikro stb.), önellátásra alkalmas, de a közeli étterem teljes kínálatára 10%-os kedvezménykártyát tudunk adni. <br><br>
+
+    Ágyneműt, törölközőt, konyharuhát biztosítunk, a szabadtéri sütéshez-főzéshez grillező, bogrács is van. A nappaliból közvetlen kijárat nyílik a nagy teraszra, udvarra. Prospektusokat, ismertetőket a környékről talál a nappaliban, sőt a Zsolnay Kulturális Negyed valamint a Cella Septichora Látogatóközpont belépődíjaiból 10% kedvezményt kaphatnak vendégeink. <br><br>
+
+    Ha pici gyerekkel jönnek, van a házban kiságy, etetőszék és fürdetőkád is, a nagyobbacskáknak néhány kerti játék (célbadobó, tollaslabda, ugróiskola stb.), ha nincs kedvük a közeli játszótérre menni. A kertben érő gyümölcsöket lehet szedni, enni.</p>
+    
+        </div>
+        
+        <div class="item item3">
+    
+    <p>1-2 fő részére</p>
+    <h3>13.000 FT / apartman / éj</h3>
+    <img src="res/img/emberkek/egy.svg" alt="">
+    <img src="res/img/emberkek/ketto.svg" alt="">
+    
+    <p>3 fő részére</p>
+    <h3>15.000 FT / apartman / éj</h3>
+    <img src="res/img/emberkek/harom.svg" alt="">
+    
+    <p>4 fő részére</p>
+    <h3>18.000 FT / apartman / éj</h3>
+    <img src="res/img/emberkek/negy.svg" alt="">
+    
+    <p>5 fő részére</p>
+    <h3>20.000 FT / apartman / éj</h3>
+    <img src="res/img/emberkek/egy.svg" alt="">
+    <img src="res/img/emberkek/negy.svg" alt="">
+    
+    <p>Kisállat</p>
+    <h3>1.500 FT / egyed / éj</h3>
+    
+        </div>
+        
+        </div>
+        
+    <div class="szallasokszolgaltatasok">    
+    
+    <h2>Szolgáltatások</h2>
+    
+    <div class="szolgaltatasokcontainer"> 
+    
+    <div class="item item1">
+    
+    <img src="res/img/szolgaltatasok/TV.svg" alt="">
+    <span>TV</span>
+    
+            </div>
+            
+            <div class="item item2">
+    
+    <img src="res/img/szolgaltatasok/tuzrakohely.svg" alt="">
+    <span>Tuzrakóhely</span>
+    
+            </div>
+            
+            <div class="item item3">
+    
+    <img src="res/img/szolgaltatasok/parkolas.svg" alt="">
+    <span>Saját Parkoló</span>
+    
+            </div>
+            
+            <div class="item item4">
+    
+    <img src="res/img/szolgaltatasok/bababarat.svg" alt="">
+    <span>Gyerekbarát</span>
+    
+            </div>
+            
+            <div class="item item5">
+    
+    <img src="res/img/szolgaltatasok/wifi.svg" alt="">
+    <span>Ingyen Wi-fi</span>
+    
+            </div>
+            
+        </div>
+    
+        </div>
+        
+        <div class="attekintescontainer"> 
+    
+    <div class="item item1">
+    
+    <h2>Áttekintés</h2>
+    
+     <table cellspacing="0">
+      <tr>
+        <th>Férohely:</th>
+        <th>4 fo (+2 fo pótággyal)</th>
+      </tr>
+      <tr>
+        <td>Kilátás</td>
+        <td>hegyekre</td>
+      </tr>
+      <tr>
+        <th>Erkély</th>
+        <th>van</th>
+      </tr>
+      <tr>
+        <td>Kert</td>
+        <td>van</td>
+      </tr>
+      <tr>
+        <th>Internet</th>
+        <th>nincs</th>
+      </tr>
+      <tr>
+        <td>Légkondi</td>
+        <td>nincs</td>
+      </tr>
+
+</table> 
+   
+     <p>
+     <button> <a href="foglalasnegyszemelyes.html">Ezt Lefoglalom</a> </button>
+     </p>
+     
+            </div>
+      
+      <div class="item item2">
+     
+     <h2>Értékelés</h2>
+     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+     <section id="szallasokstars">
+    <span id="3.1" class="fa fa-star-o"></span>
+    <span id="3.2" class="fa fa-star-o"></span>
+    <span id="3.3" class="fa fa-star-o"></span>
+    <span id="3.4" class="fa fa-star-o"></span>
+    <span id="3.5" class="fa fa-star-o"></span>
+    
+    </section>
+    
+     <p id="megjegyzes3"></p>
+    
+     <p id="nev3"></p>
+    
+    <p>
+     <button> <a href="velemenynegyszemelyes.html">Véleményt írok</a> </button>
+     </p>
+     
+        </div>
+        
+        </div>
+       
+    </section>
+    
+    
+    
+    </div>
+    
+    </section>
+    
+    <!--  Lábléc  -->
+    <footer id="kapcsolat">
+
+        <h1>Kapcsolat</h1>
+        <!--<hr />-->
+
+        <div class="elemekfooter">
+            <section id="balelem">
+                <img src="res/img/elemek/feher%20sima.svg" alt="">
+            </section>
+        </div>
+        <div class="elemekfooter">
+            <section id="kozepelem">
+                <img src="res/img/elemek/kerekitett%20feher.svg" alt="">
+            </section>
+        </div>
+        <div class="elemekfooter">
+            <section id="jobbelem">
+                <img src="res/img/elemek/sarokelem%20feher.svg" alt="">
+            </section>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="column">
+
+                <section id="lablec_uzenet">
+
+                    <h2>Küldjön üzenetet!</h2>
+
+                    <form method="post" action="">
+                        <p><input class="kapcsolat" type="text" name="name" id="inputName" placeholder="Név" maxlength="50" value="" required></p>
+                        <p><input class="kapcsolat" type="email" name="email" id="inputEmail" placeholder="E-mail" maxlength="254" value="" required></p>
+                        <p><input class="kapcsolat" type="text" name="targy" id="inputTargy" placeholder="Tárgy" maxlength="254" value="" required></p>
+                        <p><textarea class="kapcsolat" id="inputUzenet" name="uzenet" placeholder="Üzenet" rows="10" cols="50" required></textarea></p>
+                        <p><button onclick="sendEmail()" id="kuldes"> Küldés &#62; </button></p>
+                    </form>
+
+                </section>
+
+            </div>
+
+            <div class="column">
+
+                <section id="lablec_elerhetoseg">
+
+                    <h2>Elérhetőségek</h2>
+
+                    <table>
+
+                        <tr>
+
+                            <td>
+                                <span class="vastag">borbolyavh@t-online.hu</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+
+                                <span class="vastag">Borbolya apartmanok</span>
+
+                                <p>7673 Cserkút, Rákóczi u. 20.</p>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+
+
+                                <span class="vastag">Borbolya vendégház</span>
+
+                                <p>7673 Cserkút, Vörösdombi út 9.</p>
+
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+
+                                <a href="https://www.facebook.com/borbolyavendeghaz/">
+                                    <span class="vastag">Facebook oldalunk</span>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+
+                                <a href="tel:06302170719">
+                                <span class="vastag">+36-30 / 217-0719</span>
+                                </a>
+                                <a href="tel:0672564140">
+                                <p class="vastag">+36-72 / 564-140</p>
+                                </a>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <section id="footerEmail">
+                        <a href="mailto:borbolyavh@t-online.hu">
+                            <img class="lablec" src="res/img/lablec/email.png">
+                        </a>
+
+                    </section>
+
+
+
+                    <section id="footerApartman">
+                        <a href="https://www.google.hu/maps/place/Cserk%C3%BAt,+R%C3%A1k%C3%B3czi+Ferenc+u.+20,+7673/@46.0737792,18.1333126,17z/data=!3m1!4b1!4m5!3m4!1s0x4742ae7773ae03a3:0x56a9eea3e89a5438!8m2!3d46.0737792!4d18.1355013">
+                            <img class="lablec" src="res/img/lablec/marker.png">
+                        </a>
+
+
+                    </section>
+
+
+
+                    <section id="footerVendeghaz">
+                        <a href="https://www.google.hu/maps/place/Cserk%C3%BAt,+V%C3%B6r%C3%B6sdombi+%C3%BAt+9,+7673/@46.0773158,18.1330889,17z/data=!3m1!4b1!4m5!3m4!1s0x4742ae7a5bc5ca45:0x57b7332984198e13!8m2!3d46.0773158!4d18.1352776">
+                            <img class="lablec" src="res/img/lablec/marker.png">
+                        </a>
+
+
+                    </section>
+
+
+
+                    <section id="footerFacebook">
+                        <a href="https://www.facebook.com/borbolyavendeghaz/">
+                            <img class="lablec" src="res/img/lablec/facebook.png">
+
+
+                        </a>
+                    </section>
+
+
+                    <section id="footerTelefon">
+                        <img class="lablec" src="res/img/lablec/telefon.png">
+
+                    </section>
+
+
+
+
+                </section>
+
+            </div>
+
+            <div class="column">
+
+                <section id="lablec_nevjegy">
+                    <!--<table>
+                           
+                           <tr>
+                    <td>4 + 2 fő</td></tr>
+                    <tr>
+                    <td>Saját parkoló</td>
+                           
+                       </table>-->
+
+
+                    <h2>Szakácsné Fehérváry Erzsébet</h2>
+                    <p>Tulajdonos</p>
+                    <img class="lablec" src="res/img/lablec/erzsi.jpg">
+                    <span class="vastag">Telefon : +36-30/2170719</span>
+
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+   
+</body>
+    <script src="res/js/lightboxszallasok.js"></script>
+
+</html>

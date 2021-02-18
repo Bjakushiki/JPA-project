@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="res/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="res/js/velemeny.js"></script>
+    <title>Borbolya vendégház</title>
+</head>
+
+<body onload="">
+
+    <!--  Fejléc --> 
+    <header>
+       
+        <div id="cim">
+            <img id="home" src="res/img/fejlec/home.png" />
+            <li><a href="index.html">Borbolya vendégház</a></li>
+        </div>
+ 
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html">Apartmanjaink</a></li>
+            <li><a href="index.html">Kedvezmények</a></li>
+            <li><a href="index.html">Programok</a></li>
+            <li><a href="index.html">Galéria</a></li>
+            <li><a href="index.html">Szolgáltatások</a></li>
+            <li><a href="index.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+    
+    </header>
+    
+    <section id="velemeny">
+    
+    <h1>Vélemény írása</h1>
+    
+    
+    
+    <div class="elemek"> 
+        <section id="balelem">
+        <img src="res/img/elemek/fekete%20sima.svg" alt="">
+        </section>
+        </div>
+        <div class="elemek">
+        <section id="jobbelem">
+        <img src="res/img/elemek/sarokelem%20fekete.svg" alt="">
+        </section>
+        </div>
+    
+    <div id="velemenybal">
+    
+    <h3>Borbolya vendégház</h3>
+    <img class="thumb" src="res/img/apartmanok/vendeghaz/1.jpg" alt="">
+    <h2>Értékelés:</h2>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <section id="stars">
+    <span id="1" class="fa fa-star-o"></span>
+    <span id="2" class="fa fa-star-o"></span>
+    <span id="3" class="fa fa-star-o"></span>
+    <span id="4" class="fa fa-star-o"></span>
+    <span id="5" class="fa fa-star-o"></span>
+    <span id="pont"></span>
+    <span id="pontkuldes" style="display: none"></span>
+    
+    </section>
+    
+    </div>
+    
+    <div id="velemenyjobb">
+        
+        <form method="post" action="">
+                 <section id="velemenyteljeshossz">
+                 <p>
+                 <input type="text" name="name" id="inputVelemenyNev" placeholder = "Név" maxlength="50" value="" required>
+                 </p>
+                 <p>
+                 <input type="email" name="email" id="inputVelemenyEmail" placeholder = "E-mail cím" maxlength="254" value="" required>
+                 </p>
+                 </section>
+                 <section id="velemenyfelhossz">
+                  <h4>Előnyök (nem kötelező):</h4>
+                  <p><textarea id="inputElonyok" name="elonyok" rows="8" cols="45"></textarea></p>
+                           <section id="hatranyok">
+                            
+                  <h4>Hátrányok (nem kötelező):</h4>
+                  <p><textarea id="inputHatranyok" name="hatranyok" rows="8" cols="45"></textarea></p>    
+                            </section>                              
+                             
+                             
+                 </section>
+                  <section id="megjegyzes">           
+                  <h4>Megjegyzés:</h4>
+                  <p><textarea id="inputMegjegyzes" name="megjegyzes" rows="21" cols="45" required></textarea></p>
+                  <p>
+     <button class="velemenykuldes" onclick="createVelemeny(1)"> Küldés </button>
+     </p>            
+            </section>
+                
+                            <!-- <p>
+                                             <select name="inputVelemenyErtekeles" id="inputVelemenyErtekeles" placeholder = "Kérem válassza ki az ertekeleset." required>
+                                                 <option value="" disabled selected>Vélemeny</option>
+                                                 <option value="1">1</option>
+                                                 <option value="2">2</option>
+                                                 <option value="3">3</option>
+                                                 <option value="4">4</option>
+                                                 <option value="5">5</option>
+                                             </select>
+                                             </p>   -->          
+                
+
+    </form>
+    
+     
+        
+    </div>
+
+<table id="myTable">
+    <thead>
+    </thead>
+   <tbody></tbody>
+</table>
+  
+  </section>
+  
+      <!--  Lábléc  -->
+    <footer id="kapcsolat">
+
+        <h1>Kapcsolat</h1>
+        <!--<hr />-->
+
+        <div class="elemekfooter">
+            <section id="balelem">
+                <img src="res/img/elemek/feher%20sima.svg" alt="">
+            </section>
+        </div>
+        <div class="elemekfooter">
+            <section id="kozepelem">
+                <img src="res/img/elemek/kerekitett%20feher.svg" alt="">
+            </section>
+        </div>
+        <div class="elemekfooter">
+            <section id="jobbelem">
+                <img src="res/img/elemek/sarokelem%20feher.svg" alt="">
+            </section>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="column">
+
+                <section id="lablec_uzenet">
+
+                    <h2>Küldjön üzenetet!</h2>
+
+                    <form method="post" action="">
+                        <p><input type="text" name="name" id="inputName" placeholder="Név" maxlength="50" value="" required></p>
+                        <p><input type="email" name="email" id="inputEmail" placeholder="E-mail" maxlength="254" value="" required></p>
+                        <p><input type="text" name="targy" id="inputTargy" placeholder="Tárgy" maxlength="254" value="" required></p>
+                        <p><textarea id="inputUzenet" name="uzenet" placeholder="Üzenet" rows="10" cols="50" required></textarea></p>
+                        <p><button onclick="sendEmail()" id="kuldes"> Küldés &#62; </button></p>
+                    </form>
+
+                </section>
+
+            </div>
+
+            <div class="column">
+
+                <section id="lablec_elerhetoseg">
+
+                    <h2>Elérhetőségek</h2>
+
+                    <table>
+
+                        <tr>
+
+                            <td>
+                                <span class="vastag">borbolyavh@t-online.hu</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+
+                                <span class="vastag">Borbolya apartmanok</span>
+
+                                <p>7673 Cserkút, Rákóczi u. 20.</p>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+
+
+                                <span class="vastag">Borbolya vendégház</span>
+
+                                <p>7673 Cserkút, Vörösdombi út 9.</p>
+
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+
+                                <a href="https://www.facebook.com/borbolyavendeghaz/">
+                                    <span class="vastag">Facebook oldalunk</span>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+
+                                <a href="tel:06302170719">
+                                <span class="vastag">+36-30 / 217-0719</span>
+                                </a>
+                                <a href="tel:0672564140">
+                                <p class="vastag">+36-72 / 564-140</p>
+                                </a>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <section id="footerEmail">
+                        <a href="mailto:borbolyavh@t-online.hu">
+                            <img class="lablec" src="res/img/lablec/email.png">
+                        </a>
+
+                    </section>
+
+
+
+                    <section id="footerApartman">
+                        <a href="https://www.google.hu/maps/place/Cserk%C3%BAt,+R%C3%A1k%C3%B3czi+Ferenc+u.+20,+7673/@46.0737792,18.1333126,17z/data=!3m1!4b1!4m5!3m4!1s0x4742ae7773ae03a3:0x56a9eea3e89a5438!8m2!3d46.0737792!4d18.1355013">
+                            <img class="lablec" src="res/img/lablec/marker.png">
+                        </a>
+
+
+                    </section>
+
+
+
+                    <section id="footerVendeghaz">
+                        <a href="https://www.google.hu/maps/place/Cserk%C3%BAt,+V%C3%B6r%C3%B6sdombi+%C3%BAt+9,+7673/@46.0773158,18.1330889,17z/data=!3m1!4b1!4m5!3m4!1s0x4742ae7a5bc5ca45:0x57b7332984198e13!8m2!3d46.0773158!4d18.1352776">
+                            <img class="lablec" src="res/img/lablec/marker.png">
+                        </a>
+
+
+                    </section>
+
+
+
+                    <section id="footerFacebook">
+                        <a href="https://www.facebook.com/borbolyavendeghaz/">
+                            <img class="lablec" src="res/img/lablec/facebook.png">
+
+
+                        </a>
+                    </section>
+
+
+                    <section id="footerTelefon">
+                        <img class="lablec" src="res/img/lablec/telefon.png">
+
+
+                    </section>
+
+
+
+
+                </section>
+
+            </div>
+
+            <div class="column">
+
+                <section id="lablec_nevjegy">
+                    <!--<table>
+                           
+                           <tr>
+                    <td>4 + 2 fő</td></tr>
+                    <tr>
+                    <td>Saját parkoló</td>
+                           
+                       </table>-->
+
+
+                    <h2>Szakácsné Fehérváry Erzsébet</h2>
+                    <p>Tulajdonos</p>
+                    <img class="lablec" src="res/img/lablec/erzsi.jpg">
+                    <span class="vastag">Telefon : +36-30/2170719</span>
+
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script src="res/js/ertekeles.js"></script>
+
+
+</html>
